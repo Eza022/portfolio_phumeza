@@ -218,10 +218,11 @@ export default function App() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard 
-            title="REALTIME_SYNC"
+            title="RESUME_ARCHITECT"
             description="High-performance data synchronization engine using WebSockets and ArangoDB."
-            tags={["Node.js", "WebSockets", "ArangoDB"]}
-            link="#"
+            description="AI-powered web app that instantly tailors and exports professional resumes and cover letters for any job."
+            tags={["React (TypeScript)", "Tailwind CSS", "Node.js/Express", "Gemini AI", "Vite", "PDF Export"]}
+            link="https://resume-architect-xi.vercel.app/"
           />
           <ProjectCard 
             title="CROSS_PLATFORM_APP"
