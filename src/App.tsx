@@ -225,10 +225,10 @@ export default function App() {
             link="https://resume-architect-xi.vercel.app/"
           />
           <ProjectCard 
-            title="CROSS_PLATFORM_APP"
-            description="Beautiful mobile experience built with Flutter for iOS and Android."
-            tags={["Flutter", "Dart", "Firebase"]}
-            link="#"
+            title="BUDGET_TRACKER_PRO"
+            description="A highly polished, offline-first personal financial management application designed to track income, manage custom monthly budgets, and analyze spending habits securely."
+            tags={["React 19", "Tailwind CSS", "Motion  (Framer Motion v12)", "Lucide React"]}
+            link="https://bugdeting-app.vercel.app/"
           />
           <ProjectCard 
             title="QUASAR_DASHBOARD"
