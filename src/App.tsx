@@ -5,14 +5,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  ExternalLink, 
-  Code2, 
-  Terminal, 
-  Cpu, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Code2,
+  Terminal,
+  Cpu,
   Layers,
   ChevronRight,
   Menu,
@@ -21,8 +21,8 @@ import {
 
 const GlitchText = ({ text, className = "" }: { text: string; className?: string }) => {
   return (
-    <span 
-      className={`glitch-text font-display ${className}`} 
+    <span
+      className={`glitch-text font-display ${className}`}
       data-text={text}
     >
       {text}
@@ -40,7 +40,7 @@ const SlicedText = ({ children, className = "" }: { children: React.ReactNode; c
 
 const ProjectCard = ({ title, description, tags, link }: { title: string; description: string; tags: string[]; link: string }) => {
   return (
-    <motion.div 
+    <motion.div
       whileHover={{ y: -5 }}
       className="group relative bg-[#150a12] border border-white/10 p-6 rounded-none overflow-hidden"
     >
@@ -97,7 +97,7 @@ export default function App() {
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10 py-4' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="font-display text-xl font-black tracking-tighter flex items-center gap-2"
@@ -111,8 +111,8 @@ export default function App() {
           {/* Desktop Nav */}
           <div className="hidden md:flex gap-8">
             {navItems.map((item) => (
-              <a 
-                key={item.name} 
+              <a
+                key={item.name}
                 href={item.href}
                 className="font-display text-[10px] uppercase tracking-[0.2em] text-white/60 hover:text-[#ff2d75] transition-colors"
               >
@@ -122,7 +122,7 @@ export default function App() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -141,8 +141,8 @@ export default function App() {
             className="fixed inset-0 z-40 bg-black flex flex-col items-center justify-center gap-8"
           >
             {navItems.map((item) => (
-              <a 
-                key={item.name} 
+              <a
+                key={item.name}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 className="font-display text-2xl uppercase tracking-widest hover:text-[#ff2d75]"
@@ -177,7 +177,7 @@ export default function App() {
               Full-Stack <SlicedText className="text-[#ff2d75]">Developer</SlicedText> & Mobile Engineer
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#projects"
@@ -185,7 +185,7 @@ export default function App() {
               >
                 View Operations <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.a>
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#contact"
@@ -217,38 +217,37 @@ export default function App() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ProjectCard 
+          <ProjectCard
             title="RESUME_ARCHITECT"
-            description="High-performance data synchronization engine using WebSockets and ArangoDB."
             description="AI-powered web app that instantly tailors and exports professional resumes and cover letters for any job."
             tags={["React (TypeScript)", "Tailwind CSS", "Node.js/Express", "Gemini AI", "Vite", "PDF Export"]}
             link="https://resume-architect-xi.vercel.app/"
           />
-          <ProjectCard 
+          <ProjectCard
             title="BUDGET_TRACKER_PRO"
             description="A highly polished, offline-first personal financial management application designed to track income, manage custom monthly budgets, and analyze spending habits securely."
             tags={["React 19", "Tailwind CSS", "Motion  (Framer Motion v12)", "Lucide React"]}
             link="https://bugdeting-app.vercel.app/"
           />
-          <ProjectCard 
-            title="QUASAR_DASHBOARD"
-            description="Enterprise-grade administrative interface built with Vue.js and Quasar Framework."
-            tags={["Vue.js", "Quasar", "JavaScript"]}
-            link="#"
+          <ProjectCard
+            title="FIT_MIRROR"
+            description="A high-fashion, AI-powered virtual try-on demonstration application designed for innovators. It integrates realistic virtual try-on models to style curated catalog outfits seamlessly onto custom postures, offering immediate digital fitting visualization with interactive comparison sliders."
+            tags={["Vue.js", "Tailwind CSS v4", "Express.js", "Google GenAI SDK", "Motion (Framer Motion v12) "]}
+            link="https://fit-mirror-ten.vercel.app/"
           />
-          <ProjectCard 
+          <ProjectCard
             title="NODE_API_CORE"
             description="Scalable backend architecture featuring multi-tenant database support."
             tags={["Node.js", "Express", "ArangoDB"]}
             link="#"
           />
-          <ProjectCard 
+          <ProjectCard
             title="VUE_ANIMATE"
             description="Interactive UI component library with complex CSS animations and transitions."
             tags={["Vue.js", "CSS3", "HTML5"]}
             link="#"
           />
-          <ProjectCard 
+          <ProjectCard
             title="SOCKET_CHAT"
             description="Encrypted real-time messaging platform with persistent storage."
             tags={["WebSockets", "Node.js", "JavaScript"]}
@@ -294,23 +293,23 @@ export default function App() {
           <p className="text-white/60 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
             Currently available for high-impact collaborations and architectural consulting. Send a transmission to initiate contact.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-6">
-            <motion.a 
+            <motion.a
               whileHover={{ y: -5, color: '#ff2d75' }}
               href="mailto:sithukuzaphumeza@gmail.com"
               className="flex items-center gap-2 font-display text-sm tracking-widest uppercase border-b border-white/10 pb-2"
             >
               <Mail size={18} /> Email_Transmission
             </motion.a>
-            <motion.a 
+            <motion.a
               whileHover={{ y: -5, color: '#ff2d75' }}
               href="https://github.com/Eza022/"
               className="flex items-center gap-2 font-display text-sm tracking-widest uppercase border-b border-white/10 pb-2"
             >
               <Github size={18} /> Source_Code
             </motion.a>
-            <motion.a 
+            <motion.a
               whileHover={{ y: -5, color: '#ff2d75' }}
               href="https://www.linkedin.com/in/phumeza-sithukuza-345691152"
               className="flex items-center gap-2 font-display text-sm tracking-widest uppercase border-b border-white/10 pb-2"
