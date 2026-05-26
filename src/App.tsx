@@ -236,10 +236,10 @@ export default function App() {
             link="https://fit-mirror-ten.vercel.app/"
           />
           <ProjectCard
-            title="NODE_API_CORE"
-            description="Scalable backend architecture featuring multi-tenant database support."
-            tags={["Node.js", "Express", "ArangoDB"]}
-            link="#"
+            title="AI Hand Gesture Control"
+            description="A real-time application that detects and interprets hand gestures using the MediaPipe library and converts them into words."
+            tags={["Node.js", "JavaScript.js", "Mediapipe"]}
+            link="https://hand-gesture-detected.vercel.app/"
           />
           <ProjectCard
             title="VUE_ANIMATE"
